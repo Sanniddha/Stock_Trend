@@ -17,7 +17,7 @@ secure-smtplib==0.1.1
 SMTPEmail==0.4.2
 SQLAlchemy==2.0.29
 SQLAlchemy-Utils==0.41.2
-streamlit==1.32.2
+streamlit==1.34.0
 streamlit-option-menu==0.3.12
 tensorboard==2.16.2
 tensorboard-data-server==0.7.2
