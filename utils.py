@@ -15,6 +15,8 @@ from password_strength import PasswordPolicy
 import hashlib
 
 # Define a function for send email
+# Uses @st.cache_resource to run only once
+@st.cache_resource
 def sendMail(subject, receiver_email, html_message):
     def sendMail_fun(**kwargs):
 
