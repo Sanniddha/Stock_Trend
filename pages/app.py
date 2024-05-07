@@ -2,7 +2,7 @@ import numpy as np
 import streamlit as st
 import datetime
 import yfinance as yf
-#import plotly.express as px
+import plotly.express as px
 from neuralprophet import NeuralProphet
 
 from utils import *
@@ -93,14 +93,13 @@ try:
                     prediction = NP_model.predict(stock)
                     forecast = NP_model.predict(future)
                     
-                    '''
                     # Plot the future forecast
                     st.subheader(f'{future_days} Days Forecasting')
                     fig3 = px.line(forecast, x="ds", y="yhat1", color_discrete_sequence=['red'])
                     fig3.update_layout(xaxis_title='Day', yaxis_title='Close Price')
                     # Plot!
                     st.plotly_chart(fig3, use_container_width=True)
-                    '''
+                    
                     st.subheader("Components of Forecast")
                     fig_components = NP_model.plot_components(forecast)
                     st.plotly_chart(fig_components)
