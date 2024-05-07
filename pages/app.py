@@ -20,8 +20,6 @@ conn = init_conn()
 # Get the email of the user
 email = login.email_fn()
 
-st.text("WELCOME")
-
 try:
     st.text("WELCOME1")
     # Run SQL query to get the login status of the user
@@ -31,8 +29,6 @@ try:
     if login_status == 'TRUE':
         # Get the name of the user
         name = login.name_fn()
-
-        st.text("Logged IN")
 
         # Add options
         option = st.sidebar.selectbox(
@@ -135,11 +131,7 @@ try:
         if option == "Settings":
             # Redirect to profile management page
             st.switch_page('pages/profile.py')
-        
-        st.text("WELCOME2")
 
 except IndexError:
     st.error("Unauthorized Access. Please Login")
     st.switch_page('index.py')
-
-st.text("WELCOME3")
