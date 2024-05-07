@@ -8,6 +8,8 @@ from neuralprophet import NeuralProphet
 from utils import *
 import login
 
+st.text("WELCOME")
+
 # Initialize SQL connection.
 # Uses @st.cache_resource to run only once
 @st.cache_resource
