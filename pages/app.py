@@ -8,7 +8,6 @@ from neuralprophet import NeuralProphet
 from utils import *
 import login
 
-st.text("WELCOME")
 
 # Initialize SQL connection.
 # Uses @st.cache_resource to run only once
@@ -20,6 +19,8 @@ conn = init_conn()
 
 # Get the email of the user
 email = login.email_fn()
+
+st.text("WELCOME")
 
 try:
     # Run SQL query to get the login status of the user
