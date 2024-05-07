@@ -23,6 +23,7 @@ email = login.email_fn()
 st.text("WELCOME")
 
 try:
+    st.text("WELCOME1")
     # Run SQL query to get the login status of the user
     login_status = conn.query(f"SELECT login_status FROM users WHERE email = '{email}';", ttl="10m")
     login_status = login_status.iloc[0, 0]
@@ -132,7 +133,11 @@ try:
         if option == "Settings":
             # Redirect to profile management page
             st.switch_page('pages/profile.py')
+        
+        st.text("WELCOME2")
 
 except IndexError:
     st.error("Unauthorized Access. Please Login")
     st.switch_page('index.py')
+
+st.text("WELCOME3")
