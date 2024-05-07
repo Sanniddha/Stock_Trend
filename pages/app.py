@@ -32,6 +32,8 @@ try:
         # Get the name of the user
         name = login.name_fn()
 
+        st.text("Logged IN")
+
         # Add options
         option = st.sidebar.selectbox(
         f'Hi, {name}',
